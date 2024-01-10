@@ -1,15 +1,15 @@
 //
-//  SignupView.swift
+//  LoginView.swift
 //  TaskDemo
 //
-//  Created by Youssef Eldeeb on 07/01/2024.
+//  Created by Youssef Eldeeb on 08/01/2024.
 //
 
 import SwiftUI
 
-struct SignupView: View {
+struct LoginView: View {
     
-    @EnvironmentObject var viewModel: SignupViewModel
+    @StateObject var viewModel = AuthenticationViewModel(authMethed: .login)
     
     var body: some View {
         NavigationView{
@@ -19,24 +19,22 @@ struct SignupView: View {
                 signinView
                 
             }
-//            .background(Color.background)
-            .navigationTitle(AppStrings.Signup.title)
+            .navigationTitle(AppStrings.Login.title)
         }
         .padding()
         .onAppear{
             viewModel.reset()
         }
-//        .background(Color.background)
         
     }
     
     private var socialMediaButtons: some View {
         VStack{
             Button(AppStrings.Signup.Button.apple){
-                
+                //
             }.buttonStyle(.customButtonStyle())
             Button(AppStrings.Signup.Button.google){
-                
+                //
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -44,15 +42,17 @@ struct SignupView: View {
     
     private var textfields: some View {
         VStack(spacing: 16){
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.name, text: $viewModel.name)
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.email, text: $viewModel.email)
+            PrimaryTextField(placeholder: AppStrings.Login.Textfield.email, text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .textContentType(.emailAddress)
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
+            PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
             
-            Button(AppStrings.Signup.Button.signup){
-                
+            Button(AppStrings.Login.Button.login){
+                viewModel.Authenticate()
             }.buttonStyle(.customButtonStyle())
+                .fullScreenCover(isPresented: $viewModel.isAuthenticatedValid, content: {
+                    TabBarView(selectedIndex: 0)
+                })
             
         }
         .autocorrectionDisabled(true)
@@ -72,6 +72,6 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView()
-        .environmentObject(SignupViewModel())
+    LoginView()
+        .environmentObject(AuthenticationViewModel(authMethed: .login))
 }

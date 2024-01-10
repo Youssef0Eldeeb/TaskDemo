@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  AuthenticationViewModel.swift
 //  TaskDemo
 //
 //  Created by Youssef Eldeeb on 08/01/2024.
@@ -7,9 +7,10 @@
 
 import Foundation
 
-class LoginViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     var email: String = ""
     var password: String = ""
+    var authMethed: AuthMethod
     
     @Published var isAuthenticatedValid: Bool = false
     
@@ -18,20 +19,20 @@ class LoginViewModel: ObservableObject {
         password = ""
     }
     
+    init(authMethed: AuthMethod) {
+        self.authMethed = authMethed
+    }
     
-    
-    
-    func login() {
+    func Authenticate() {
         
         let userDefaults = UserDefaults.standard
         
-        
         guard isValidEmail(email) && password.count >= 8 else {return}
         
-        AuthenticationManager.shared.login(email: email, password: password) { result in
+        AuthenticationManager.shared.Authenticate(authMethod: authMethed,email: email, password: password) { result in
             switch result {
             case .success(let token):
-                userDefaults.setValue(token, forKey: "JsonWebToken")
+                userDefaults.setValue(token, forKey: KUserToken)
                 DispatchQueue.main.async{ [weak self] in
                     self?.isAuthenticatedValid = true
                 }

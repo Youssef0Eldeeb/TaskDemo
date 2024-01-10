@@ -1,15 +1,15 @@
 //
-//  LoginView.swift
+//  SignupView.swift
 //  TaskDemo
 //
-//  Created by Youssef Eldeeb on 08/01/2024.
+//  Created by Youssef Eldeeb on 07/01/2024.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignupView: View {
     
-    @StateObject var viewModel = LoginViewModel()
+    @StateObject var viewModel = AuthenticationViewModel(authMethed: .signup)
     
     var body: some View {
         NavigationView{
@@ -31,10 +31,10 @@ struct LoginView: View {
     private var socialMediaButtons: some View {
         VStack{
             Button(AppStrings.Signup.Button.apple){
-                //
+                
             }.buttonStyle(.customButtonStyle())
             Button(AppStrings.Signup.Button.google){
-                //
+                
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -42,15 +42,15 @@ struct LoginView: View {
     
     private var textfields: some View {
         VStack(spacing: 16){
-            PrimaryTextField(placeholder: AppStrings.Login.Textfield.email, text: $viewModel.email)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.email, text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .textContentType(.emailAddress)
-            PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
             
-            Button(AppStrings.Login.Button.login){
-                viewModel.login()
+            Button(AppStrings.Signup.Button.signup){
+                viewModel.Authenticate()
             }.buttonStyle(.customButtonStyle())
-                .sheet(isPresented: $viewModel.isAuthenticatedValid, content: {
+                .fullScreenCover(isPresented: $viewModel.isAuthenticatedValid, content: {
                     TabBarView(selectedIndex: 0)
                 })
             
@@ -72,6 +72,6 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
-        .environmentObject(LoginViewModel())
+    SignupView()
+        .environmentObject(AuthenticationViewModel(authMethed: .signup))
 }

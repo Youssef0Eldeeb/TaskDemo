@@ -22,6 +22,10 @@ enum AuthenticationError: Error{
     case custom(errorMessage: String)
 }
 
+enum AuthMethod: String{
+    case signup
+    case login
+}
 
 
 class AuthenticationManager{
@@ -30,8 +34,8 @@ class AuthenticationManager{
     
     private init() {}
     
-    func login(email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> (Void)){
-        guard let url = URL(string: "https://diamond-wooded-dilophosaurus.glitch.me/login") else {
+    func Authenticate(authMethod: AuthMethod, email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> (Void)){
+        guard let url = URL(string: "https://diamond-wooded-dilophosaurus.glitch.me/\(authMethod.rawValue)") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
@@ -58,6 +62,14 @@ class AuthenticationManager{
             }
             completion(.success(token))
         }.resume()
+        
+    }
+    
+    
+    
+    func logout(){
+        let userDefualt = UserDefaults.standard
+        userDefualt.removeObject(forKey: KUserToken)
         
     }
 }
