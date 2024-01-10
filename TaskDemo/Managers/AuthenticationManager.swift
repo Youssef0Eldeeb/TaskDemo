@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginRequestBody: Codable{
-    let username: String
+    let email: String
     let password: String
 }
 struct LoginResponse: Codable{
@@ -30,12 +30,12 @@ class AuthenticationManager{
     
     private init() {}
     
-    func login(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> (Void)){
-        guard let url = URL(string: "https://strong-spangled-apartment.glitch.me/login") else {
+    func login(email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> (Void)){
+        guard let url = URL(string: "https://diamond-wooded-dilophosaurus.glitch.me/login") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
-        let body = LoginRequestBody(username: username, password: password)
+        let body = LoginRequestBody(email: email, password: password)
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

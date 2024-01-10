@@ -12,14 +12,14 @@ struct HomeView: View {
     @Namespace private var menuItemTransition
     
     let gridColumns = [
-        GridItem(.adaptive(minimum: 140)),
-        GridItem(.adaptive(minimum: 140))
+        GridItem(.adaptive(minimum: 120)),
+        GridItem(.adaptive(minimum: 120))
     ]
 //    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView{
-            VStack(alignment: .leading, spacing: 20){
+            VStack(alignment: .leading, spacing: 10){
                 headlineText(text: "Category")
                 horizontalCollectionView
                 headlineText(text: "Products")

@@ -50,6 +50,9 @@ struct LoginView: View {
             Button(AppStrings.Login.Button.login){
                 viewModel.login()
             }.buttonStyle(.customButtonStyle())
+                .sheet(isPresented: $viewModel.isAuthenticatedValid, content: {
+                    TabBarView(selectedIndex: 0)
+                })
             
         }
         .autocorrectionDisabled(true)

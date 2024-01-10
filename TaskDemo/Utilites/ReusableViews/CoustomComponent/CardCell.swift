@@ -11,7 +11,7 @@ struct CardCell: View {
     var body: some View {
         VStack(alignment: .leading){
             Image(systemName: "house")
-                .frame(width: 140, height: 100)
+                .frame(width: 160, height: 120)
                 .background(.gray)
                 .cornerRadius(12)
                 .scaledToFit()
@@ -22,10 +22,11 @@ struct CardCell: View {
                     .font(.system(size: 14, weight: .regular, design: .default))
             }
             .padding(.leading, 5)
+            .padding(.bottom, 5)
             .lineLimit(0)
                 
         }
-        .frame(width: 140, height: 140)
+        .frame(width: 160, height: 170)
         
     }
 }

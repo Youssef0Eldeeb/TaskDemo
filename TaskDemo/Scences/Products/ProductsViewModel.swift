@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor 
 class ProductsViewModel: ObservableObject{
-    @Published var productsArray: [Product] = []
+    @Published var productsArray: [Product] = [.init(id: nil, price: nil, oldPrice: nil, discount: nil, image: nil, name: "ProductName", description: "descripton", images: nil, inFavorites: nil, inCart: nil),.init(id: nil, price: nil, oldPrice: nil, discount: nil, image: nil, name: "ProductName", description: "descripton", images: nil, inFavorites: nil, inCart: nil),.init(id: nil, price: nil, oldPrice: nil, discount: nil, image: nil, name: "ProductName", description: "descripton", images: nil, inFavorites: nil, inCart: nil)]
     
     func fetchProducts(){
         APIManager.shared.fetchDataByCategory(categoryId: "44") { [weak self] responseProducts, error in

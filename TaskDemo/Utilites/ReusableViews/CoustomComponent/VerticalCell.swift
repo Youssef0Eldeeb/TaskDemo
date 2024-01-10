@@ -10,9 +10,10 @@ import SwiftUI
 struct VerticalCell: View {
     let product: Product
     var body: some View {
-        ZStack{
+        HStack(){
             AsyncImage(url: URL(string: product.image ?? ""))
-                .frame(maxWidth: .infinity)
+                .frame(width: 100)
+                .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(product.name ?? "")
@@ -24,18 +25,20 @@ struct VerticalCell: View {
                     .font(.footnote)
             }
             .lineLimit(2)
-            .foregroundColor(.white)
-            .padding(10)
-            .padding(.vertical, 20)
-        }//: ZStack
+            .foregroundColor(.black)
+            .frame(maxWidth: .infinity)
+            
+        }//: HStack
+        .background(Color.tabBarBackground)
         .cornerRadius(10)
         .frame(maxWidth: .infinity)
-        .frame(height: 80)
-        .padding()
+        .frame(height: 100)
+        .shadow(radius: 3)
+        .padding(.vertical, 5)
     }
     
 }
 
-//#Preview {
-//    VerticalCell(product: .init(id: <#T##Int?#>, price: <#T##Double?#>, oldPrice: <#T##Double?#>, discount: <#T##Int?#>, image: <#T##String?#>, name: <#T##String?#>, description: <#T##String?#>, images: <#T##[String]?#>, inFavorites: <#T##Bool?#>, inCart: <#T##Bool?#>)
-//}
+#Preview {
+    VerticalCell(product: .init(id: nil, price: nil, oldPrice: nil, discount: nil, image: nil, name: "ProductName", description: "descripton", images: nil, inFavorites: nil, inCart: nil))
+}
