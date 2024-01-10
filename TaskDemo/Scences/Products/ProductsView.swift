@@ -57,7 +57,7 @@ struct ProductsView: View {
             VStack{
                 ForEach(viewModel.productsArray.indices, id: \.self){ index in
                     NavigationLink {
-                        Details()
+                        DetailsView()
                     } label: {
                         VerticalCell(product: viewModel.productsArray[index])
                     }

@@ -45,7 +45,7 @@ struct HomeView: View {
             HStack(spacing: 20){
                 ForEach([1,2,3,4], id: \.self) { index in
                     NavigationLink {
-                        Details()
+                        DetailsView()
                     } label: {
                         HorizontalCell(title: "hello", description: "description", imageUrl: "https://student.valuxapps.com/storage/uploads/categories/16445270619najK.6242655.jpg")
                     }

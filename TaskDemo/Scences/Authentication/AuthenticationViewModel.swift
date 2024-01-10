@@ -49,4 +49,12 @@ class AuthenticationViewModel: ObservableObject {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
+    
+    func logout(){
+        let userDefualt = UserDefaults.standard
+        userDefualt.removeObject(forKey: KUserToken)
+        DispatchQueue.main.async{ [weak self] in
+            self?.isAuthenticatedValid = false
+        }
+    }
 }

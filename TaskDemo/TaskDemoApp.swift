@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TaskDemoApp: App {
+    
+    @StateObject private var appRouter = AppRouter.shared
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            AnyView(appRouter.rootView)
         }
     }
 }

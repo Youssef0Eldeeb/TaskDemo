@@ -1,5 +1,5 @@
 //
-//  Details.swift
+//  DetailsView.swift
 //  TaskDemo
 //
 //  Created by Youssef Eldeeb on 08/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Details: View {
+struct DetailsView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -109,5 +109,5 @@ struct Details: View {
 }
 
 #Preview {
-    Details()
+    DetailsView()
 }

@@ -28,11 +28,11 @@ enum AuthMethod: String{
 }
 
 
-class AuthenticationManager{
+class AuthenticationManager: ObservableObject{
     
     static let shared = AuthenticationManager()
     
-    private init() {}
+//    private init() {}
     
     func Authenticate(authMethod: AuthMethod, email: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> (Void)){
         guard let url = URL(string: "https://diamond-wooded-dilophosaurus.glitch.me/\(authMethod.rawValue)") else {
@@ -67,9 +67,4 @@ class AuthenticationManager{
     
     
     
-    func logout(){
-        let userDefualt = UserDefaults.standard
-        userDefualt.removeObject(forKey: KUserToken)
-        
-    }
 }

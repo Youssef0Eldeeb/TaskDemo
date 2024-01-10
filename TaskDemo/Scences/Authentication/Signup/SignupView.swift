@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+
+
+
 struct SignupView: View {
     
     @StateObject var viewModel = AuthenticationViewModel(authMethed: .signup)
+    
+//    @Published var pageArray = [LoginView()]
     
     var body: some View {
         NavigationView{
@@ -62,10 +67,15 @@ struct SignupView: View {
     private var signinView: some View {
         HStack {
             Text(AppStrings.Signup.Text.signin)
-            Button(AppStrings.Signup.Button.signin) {
-                //
-            }
-            .foregroundColor(.primaryButton)
+            NavigationLink(destination: LoginView(), label: {
+                Text(AppStrings.Signup.Button.signin)
+                    .foregroundStyle(Color.primaryButton)
+//                Button(AppStrings.Signup.Button.signin) {
+//                    
+//                }
+//                .foregroundColor(.primaryButton)
+            })
+            
         }
     }
     
