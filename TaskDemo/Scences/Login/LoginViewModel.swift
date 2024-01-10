@@ -8,8 +8,8 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
+    var email: String = ""
+    var password: String = ""
     @Published var isAuthenticationValid: Bool = false
     
     func reset() {
@@ -26,8 +26,18 @@ class LoginViewModel: ObservableObject {
     }
     
     
-    func login(onError: () -> Void = {}) {
+    func login() {
         
+        let userDefaults = UserDefaults.standard
+        
+        AuthenticationManager.shared.login(username: email, password: password) { result in
+            switch result {
+            case .success(let token):
+                userDefaults.setValue(token, forKey: "JsonWebToken")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func isValidEmail(_ email: String) -> Bool {

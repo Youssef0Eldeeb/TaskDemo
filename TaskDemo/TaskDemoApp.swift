@@ -11,7 +11,7 @@ import SwiftUI
 struct TaskDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBarView(selectedIndex: 0)
+            LoginView()
         }
     }
 }

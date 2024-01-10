@@ -1,15 +1,15 @@
 //
-//  Signup.swift
+//  LoginView.swift
 //  TaskDemo
 //
-//  Created by Youssef Eldeeb on 07/01/2024.
+//  Created by Youssef Eldeeb on 08/01/2024.
 //
 
 import SwiftUI
 
-struct Signup: View {
+struct LoginView: View {
     
-    @EnvironmentObject var viewModel: SignupViewModel
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationView{
@@ -19,24 +19,22 @@ struct Signup: View {
                 signinView
                 
             }
-//            .background(Color.background)
             .navigationTitle(AppStrings.Signup.title)
         }
         .padding()
         .onAppear{
             viewModel.reset()
         }
-//        .background(Color.background)
         
     }
     
     private var socialMediaButtons: some View {
         VStack{
             Button(AppStrings.Signup.Button.apple){
-                
+                //
             }.buttonStyle(.customButtonStyle())
             Button(AppStrings.Signup.Button.google){
-                
+                //
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -44,14 +42,13 @@ struct Signup: View {
     
     private var textfields: some View {
         VStack(spacing: 16){
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.name, text: $viewModel.name)
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.email, text: $viewModel.email)
+            PrimaryTextField(placeholder: AppStrings.Login.Textfield.email, text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .textContentType(.emailAddress)
-            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
+            PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
             
-            Button(AppStrings.Signup.Button.signup){
-                
+            Button(AppStrings.Login.Button.login){
+                viewModel.login()
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -72,6 +69,6 @@ struct Signup: View {
 }
 
 #Preview {
-    Signup()
-        .environmentObject(SignupViewModel())
+    LoginView()
+        .environmentObject(LoginViewModel())
 }

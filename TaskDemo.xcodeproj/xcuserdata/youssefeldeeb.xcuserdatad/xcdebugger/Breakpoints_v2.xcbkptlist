@@ -170,6 +170,66 @@
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "144">
                </Location>
+               <Location
+                  uuid = "867BE024-1C3D-4804-8071-2B7A27937148 - 91f39f54afe664ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "302">
+               </Location>
+               <Location
+                  uuid = "867BE024-1C3D-4804-8071-2B7A27937148 - c4885cdf38fd119d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "867BE024-1C3D-4804-8071-2B7A27937148 - 2b8136a0318f38b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  uuid = "867BE024-1C3D-4804-8071-2B7A27937148 - 81780229809c5ab9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "70">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -278,6 +338,36 @@
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "312">
                </Location>
+               <Location
+                  uuid = "3F1D68D5-702E-4B54-A52C-AFBF30804BD0 - 2b8136a0318f3bd1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1660">
+               </Location>
+               <Location
+                  uuid = "3F1D68D5-702E-4B54-A52C-AFBF30804BD0 - 81780229809c59d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "292">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -370,6 +460,36 @@
                   startingLineNumber = "29"
                   endingLineNumber = "29"
                   offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "6D3F2E7A-EA5D-4357-8BAB-D33CEEECC0B7 - 2b8136a0318f3bb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "912">
+               </Location>
+               <Location
+                  uuid = "6D3F2E7A-EA5D-4357-8BAB-D33CEEECC0B7 - 81780229809c59b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "127">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -484,6 +604,289 @@
             endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "560FB87F-1469-47B9-8769-BCB180984E2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Login/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "textfields"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "login(username:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 29f3ac9230401c72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 29f3ac9230401c72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1099">
+               </Location>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 29f3ac9230401c72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 29f3ac9230401c72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "607">
+               </Location>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 3ddd31467b14d0eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;TaskDemo.LoginResponse, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "721">
+               </Location>
+               <Location
+                  uuid = "183B368E-25E9-47D6-AF5A-4B1DE5E28925 - 41a8aca96ec8909e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(username: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1099">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A0FD85B-A004-48FE-B2D2-BAE3E498B87E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "login(username:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A0FD85B-A004-48FE-B2D2-BAE3E498B87E - 3ddd31467b14d38c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;TaskDemo.LoginResponse, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "393">
+               </Location>
+               <Location
+                  uuid = "1A0FD85B-A004-48FE-B2D2-BAE3E498B87E - 41a8aca96ec893f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(username: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "620">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D92E797A-25D3-44A1-8B3A-2B91EFF4BB0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "login(username:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D92E797A-25D3-44A1-8B3A-2B91EFF4BB0B - 3ddd31467b14d230"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;TaskDemo.LoginResponse, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+               <Location
+                  uuid = "D92E797A-25D3-44A1-8B3A-2B91EFF4BB0B - 41a8aca96ec89245"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.AuthenticationManager.login(username: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "793">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A50EF7EA-F6C9-42B0-99D3-5942A52E0B28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/AuthenticationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "login(username:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A50EF7EA-F6C9-42B0-99D3-5942A52E0B28 - 4f765e4eea313116"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "909">
+               </Location>
+               <Location
+                  uuid = "A50EF7EA-F6C9-42B0-99D3-5942A52E0B28 - 6198ff6c0cc26d4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskDemo.AuthenticationManager.login(email: Swift.String, password: Swift.String, completion: (Swift.Result&lt;TaskDemo.LoginResponse, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "909">
+               </Location>
+               <Location
+                  uuid = "A50EF7EA-F6C9-42B0-99D3-5942A52E0B28 - d3a8c97b9dba4fb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskDemo.AuthenticationManager.login(username: Swift.String, password: Swift.String, completion: (Swift.Result&lt;Swift.String, TaskDemo.AuthenticationError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/AuthenticationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "909">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

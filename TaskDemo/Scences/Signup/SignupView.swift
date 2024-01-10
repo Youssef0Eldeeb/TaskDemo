@@ -1,15 +1,15 @@
 //
-//  Login.swift
+//  SignupView.swift
 //  TaskDemo
 //
-//  Created by Youssef Eldeeb on 08/01/2024.
+//  Created by Youssef Eldeeb on 07/01/2024.
 //
 
 import SwiftUI
 
-struct Login: View {
+struct SignupView: View {
     
-    @EnvironmentObject var viewModel: LoginViewModel
+    @EnvironmentObject var viewModel: SignupViewModel
     
     var body: some View {
         NavigationView{
@@ -33,10 +33,10 @@ struct Login: View {
     private var socialMediaButtons: some View {
         VStack{
             Button(AppStrings.Signup.Button.apple){
-                //
+                
             }.buttonStyle(.customButtonStyle())
             Button(AppStrings.Signup.Button.google){
-                //
+                
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -44,13 +44,14 @@ struct Login: View {
     
     private var textfields: some View {
         VStack(spacing: 16){
-            PrimaryTextField(placeholder: AppStrings.Login.Textfield.email, text: $viewModel.email)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.name, text: $viewModel.name)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.email, text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .textContentType(.emailAddress)
-            PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
             
             Button(AppStrings.Signup.Button.signup){
-                //
+                
             }.buttonStyle(.customButtonStyle())
             
         }
@@ -71,6 +72,6 @@ struct Login: View {
 }
 
 #Preview {
-    Login()
-        .environmentObject(LoginViewModel())
+    SignupView()
+        .environmentObject(SignupViewModel())
 }
