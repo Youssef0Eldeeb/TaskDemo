@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductsView: View {
+    
+    @StateObject var viewModel = ProductsViewModel()
     @Namespace private var menuItemTransition
     @State var selectedIndex: Int = 0
     var categoryArray = ["Item1", "Item2", "Item3"]
@@ -19,12 +21,15 @@ struct ProductsView: View {
             }
             .navigationTitle("Products")
         }
+        .onAppear {
+            viewModel.fetchProducts()
+        }
     }
     var catogeryCollection: some View{
         ScrollViewReader { scrollView in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10){
-                    ForEach(["item1", "item2"].indices, id: \.self){ index in
+                    ForEach(categoryArray.indices, id: \.self){ index in
                         CatogeryCell(name: categoryArray[index].capitalized, isActive: selectedIndex == index, nameSpace: menuItemTransition)
                             .onTapGesture{
                                 withAnimation(.easeInOut) {
@@ -50,11 +55,11 @@ struct ProductsView: View {
     var verticalCollection: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack{
-                ForEach([1,2,3].indices, id: \.self){ index in
+                ForEach(viewModel.productsArray.indices, id: \.self){ index in
                     NavigationLink {
                         Details()
                     } label: {
-                        VerticalCell(title: "hello", description: "description")
+                        VerticalCell(product: viewModel.productsArray[index])
                     }
 
                     

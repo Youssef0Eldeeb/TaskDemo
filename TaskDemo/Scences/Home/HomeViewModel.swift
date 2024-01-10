@@ -14,10 +14,10 @@ class HomeViewModel: ObservableObject{
     
     @Published var category: [Category] = []
      
-    func fetchCategory(){
-        apiManager.fetchCategories()
-        category = apiManager.responseData ?? []
-        print(category.count, "\n", category)
-    }
+//    func fetchCategory(){
+//        apiManager.fetchCategories()
+//        category = apiManager.responseData ?? []
+//        print(category.count, "\n", category)
+//    }
     
 }

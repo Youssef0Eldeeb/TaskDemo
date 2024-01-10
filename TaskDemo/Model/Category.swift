@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct DataClass: Codable {
-    let currentPage: Int?
+struct CategoryData: Codable {
     let data: [Category]?
 }
 

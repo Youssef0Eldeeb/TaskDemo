@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct VerticalCell: View {
-    let title: String
-    let description: String
+    let product: Product
     var body: some View {
         ZStack{
-            AsyncImage(url: URL(string: ""))
+            AsyncImage(url: URL(string: product.image ?? ""))
                 .frame(maxWidth: .infinity)
             
             VStack(alignment: .leading, spacing: 10) {
-                Text(title)
+                Text(product.name ?? "")
                     .font(.title3)
                     .fontDesign(.serif)
                     .fontWeight(.bold)
                 
-                Text(description)
+                Text(product.description ?? "")
                     .font(.footnote)
             }
             .lineLimit(2)
@@ -37,6 +36,6 @@ struct VerticalCell: View {
     
 }
 
-#Preview {
-    VerticalCell(title: "Item", description: "This is Item")
-}
+//#Preview {
+//    VerticalCell(product: .init(id: <#T##Int?#>, price: <#T##Double?#>, oldPrice: <#T##Double?#>, discount: <#T##Int?#>, image: <#T##String?#>, name: <#T##String?#>, description: <#T##String?#>, images: <#T##[String]?#>, inFavorites: <#T##Bool?#>, inCart: <#T##Bool?#>)
+//}
