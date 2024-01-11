@@ -12,12 +12,19 @@ class HomeViewModel: ObservableObject{
     
     @ObservedObject var apiManager = APIManager()
     
-    @Published var category: [Category] = []
+    @Published var banners: [Banner] = []
+    @Published var popularProducts: [Product] = []
      
-//    func fetchCategory(){
-//        apiManager.fetchCategories()
-//        category = apiManager.responseData ?? []
-//        print(category.count, "\n", category)
-//    }
+    func fetchHomeResponse (){
+        apiManager.fetchHomeResponse { homeData, error in
+            guard let homeData = homeData, error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+            self.banners = homeData.banners
+            self.popularProducts = homeData.products
+        }
+    }
+    
     
 }

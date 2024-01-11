@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct CardCell: View {
+    let product: Product
     var body: some View {
         VStack(alignment: .leading){
-            Image(systemName: "house")
-                .frame(width: 160, height: 120)
-                .background(.gray)
-                .cornerRadius(12)
-                .scaledToFit()
+            AsyncImage(url: URL(string: product.image ?? ""), content: { image in
+                image.resizable() 
+                    .aspectRatio(contentMode: .fit)
+            }, placeholder: {})
+            .frame(width: 160, height: 120)
+            .cornerRadius(12)
+            
+                
             VStack(alignment: .leading){
-                Text("title")
+                Text(product.name ?? "")
                     .font(.system(size: 18, weight: .bold, design: .default))
-                Text("descriptiondescription")
+                Text("Price: \(product.price ?? 0.0)")
                     .font(.system(size: 14, weight: .regular, design: .default))
             }
             .padding(.leading, 5)
@@ -32,5 +36,5 @@ struct CardCell: View {
 }
 
 #Preview {
-    CardCell()
+    CardCell(product: .init(id: nil, price: 234, oldPrice: nil, discount: nil, image: "https://student.valuxapps.com/storage/uploads/products/1615440322npwmU.71DVgBTdyLL._SL1500_.jpg", name: "iphone 12", description: "", images: nil, inFavorites: nil, inCart: nil))
 }

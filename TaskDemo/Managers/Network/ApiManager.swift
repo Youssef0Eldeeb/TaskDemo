@@ -54,7 +54,27 @@ class APIManager: ObservableObject {
                 print(error.localizedDescription)
                 completion(nil, error)
             }
-        }
+        }.resume()
+    }
+    
+    func fetchHomeResponse(completion: @escaping (HomeData?, Error?) -> (Void)){
+        guard let url = URL(string: "https://student.valuxapps.com/api/home") else {return}
+        
+        URLSession.shared.dataTask(with: url){ data, response, error in
+            guard let data = data , error == nil else {
+                completion(nil, error)
+                return
+            }
+            do{
+                let decodedData = try JSONDecoder().decode(HomeResponse.self, from: data)
+                DispatchQueue.main.async{
+                    completion(decodedData.data, nil)
+                }
+            }catch{
+                print(error.localizedDescription)
+                completion(nil, error)
+            }
+        }.resume()
     }
         
     

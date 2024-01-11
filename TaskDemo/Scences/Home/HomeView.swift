@@ -11,19 +11,19 @@ struct HomeView: View {
     
     @Namespace private var menuItemTransition
     @StateObject private var navigation = NavigationManager()
+    @StateObject private var viewModel = HomeViewModel()
     
     let gridColumns = [
         GridItem(.adaptive(minimum: 120)),
         GridItem(.adaptive(minimum: 120))
     ]
-//    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationStack(path: $navigation.routes) {
             VStack(alignment: .leading, spacing: 10){
-                headlineText(text: "Category")
+                
                 horizontalCollectionView
-                headlineText(text: "Products")
+                headlineText(text: "Popular")
                 cardCollection
             }
             .navigationDestination(for: NavigationEnum.self) { route in
@@ -42,6 +42,9 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            viewModel.fetchHomeResponse()
+        })
     }
     
     func headlineText(text: String) -> some View{
@@ -53,22 +56,26 @@ struct HomeView: View {
     var horizontalCollectionView: some View{
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20){
-                ForEach([1,2,3,4], id: \.self) { index in
-                    HorizontalCell(title: "hello", description: "description", imageUrl: "https://student.valuxapps.com/storage/uploads/categories/16445270619najK.6242655.jpg").onTapGesture {
-                        navigation.navigate(to: .details)
-                    }
+                ForEach(viewModel.banners, id: \.self) { banner in
+                    HorizontalCell(banner: banner)
                 }
             }
         }
         .padding(.leading, 15)
         .frame(height: 250)
     }
+    private func HorizontalCell(banner: Banner) -> some View{
+        AsyncImage(url: URL(string: banner.image ?? "https://student.valuxapps.com/storage/uploads/banners/1689107104Ezc0d.photo_2023-07-11_23-07-59.png"))
+            .frame(width: 300, height: 250)
+            .scaledToFit()
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
     
     var cardCollection: some View{
         ScrollView(.vertical, showsIndicators: false){
             LazyVGrid(columns: gridColumns, content: {
-                ForEach([1,2,3,4,5,4,4,4].indices, id: \.self){index in
-                    CardCell()
+                ForEach(viewModel.popularProducts, id: \.self){product in
+                    CardCell(product: product)
                         .onTapGesture {
                             navigation.navigate(to: .details)
                         }
