@@ -11,9 +11,14 @@ struct VerticalCell: View {
     let product: Product
     var body: some View {
         HStack(){
-            AsyncImage(url: URL(string: product.image ?? ""))
-                .frame(width: 100)
-                .cornerRadius(10)
+            AsyncImage(url: URL(string: product.image ?? ""), content: { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fit)
+            }, placeholder: {})
+            .frame(width: 100, height: 100)
+            .cornerRadius(10)
+            .background(Color(.systemBackground))
+            
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(product.name ?? "")

@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct ProductResponse: Codable{
+    let data: ProductData
+}
+
 struct ProductData: Codable {
     let data: [Product]?
 }

@@ -733,5 +733,322 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D36055EF-84DD-438B-9945-3B3B29BF6D56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Products/ProductsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchProducts(categoryId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D36055EF-84DD-438B-9945-3B3B29BF6D56 - 7dd83395eff80734"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.ProductsViewModel.fetchProducts(categoryId: Swift.String) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Scences/Products/ProductsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1062">
+               </Location>
+               <Location
+                  uuid = "D36055EF-84DD-438B-9945-3B3B29BF6D56 - 7fbfaf719ddf6049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.ProductsViewModel.fetchProducts(categoryId: Swift.String) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Scences/Products/ProductsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "245">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "220ABDB1-DA67-4532-AAB5-DB5E161C4415"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Products/ProductsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "220ABDB1-DA67-4532-AAB5-DB5E161C4415 - 9ff681d912971ef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskDemo.ProductsViewModel.fetchProducts(categoryId: Swift.String) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Scences/Products/ProductsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "220ABDB1-DA67-4532-AAB5-DB5E161C4415 - a8b01e61d37bb6c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Category&gt;&gt;) -&gt; () in TaskDemo.ProductsViewModel.fetchCategory() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Scences/Products/ProductsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "220ABDB1-DA67-4532-AAB5-DB5E161C4415 - a8b01e61d37bb6c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Category&gt;&gt;) -&gt; () in TaskDemo.ProductsViewModel.fetchCategory() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Scences/Products/ProductsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7885842-F761-4329-BFBE-D73EB251B8E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/Network/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchCategories()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7885842-F761-4329-BFBE-D73EB251B8E4 - d302e09a0bbd9cb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "701">
+               </Location>
+               <Location
+                  uuid = "A7885842-F761-4329-BFBE-D73EB251B8E4 - d302e09a0bbd9cb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "694">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99BF9848-83FA-40DA-8CCF-82DB9B169E4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/Network/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchDataByCategory(categoryId:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "99BF9848-83FA-40DA-8CCF-82DB9B169E4A - 8908a7f7d5c2dd94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.APIManager.fetchDataByCategory(categoryId: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "99BF9848-83FA-40DA-8CCF-82DB9B169E4A - 8908a7f7d5c2dd94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.APIManager.fetchDataByCategory(categoryId: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "99BF9848-83FA-40DA-8CCF-82DB9B169E4A - 8908a7f7d5c2dd94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TaskDemo.APIManager.fetchDataByCategory(categoryId: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;TaskDemo.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "339">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A757A8D-2C4E-4B62-9E61-D299BB8BBD43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/Network/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchCategories()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A757A8D-2C4E-4B62-9E61-D299BB8BBD43 - d302e09a0bbd9d5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1130">
+               </Location>
+               <Location
+                  uuid = "1A757A8D-2C4E-4B62-9E61-D299BB8BBD43 - d302e09a0bbd9d5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1154">
+               </Location>
+               <Location
+                  uuid = "1A757A8D-2C4E-4B62-9E61-D299BB8BBD43 - d302e09a0bbd9d5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskDemo.APIManager.fetchCategories() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Desktop/TaskDemo/TaskDemo/Managers/Network/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "926">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F5772C8-02A5-46BB-915C-C611235EA521"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/Network/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchDataByCategory(categoryId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69B42A26-D34F-4BCD-89D8-BDD605303599"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Managers/Network/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchDataByCategory(categoryId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

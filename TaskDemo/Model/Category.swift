@@ -7,12 +7,16 @@
 
 import Foundation
 
+struct CategoryResponse: Codable {
+    let data: CategoryData
+}
+
 struct CategoryData: Codable {
     let data: [Category]?
 }
 
 struct Category: Codable, Identifiable {
-    let id: Int
-    let name: String
-    let image: String
+    var id: Int
+    var name: String
+    var image: String
 }

@@ -26,9 +26,8 @@ class APIManager: ObservableObject {
                 guard let httpRespnse = response as? HTTPURLResponse, httpRespnse.statusCode == 200 else{
                     return
                 }
-                let result = try JSONDecoder().decode(CategoryData.self, from: data)
-                self.responseCategoryData = result.data
-                print(responseCategoryData)
+                let result = try JSONDecoder().decode(CategoryResponse.self, from: data)
+                self.responseCategoryData = result.data.data
                 
             }catch{
                 print(error.localizedDescription)
@@ -45,10 +44,10 @@ class APIManager: ObservableObject {
                 return
             }
             do{
-                let decodedData = try JSONDecoder().decode(ProductData.self, from: data)
+                let decodedData = try JSONDecoder().decode(ProductResponse.self, from: data)
                 DispatchQueue.main.async{
-                    print(decodedData)
-                    completion(decodedData.data, nil)
+                    print(decodedData.data.data?.count)
+                    completion(decodedData.data.data, nil)
                 }
             }catch{
                 print(error.localizedDescription)
