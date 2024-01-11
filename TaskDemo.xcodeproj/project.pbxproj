@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A1C9C6B52B4AF6400017E5DC /* TaskDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6B42B4AF6400017E5DC /* TaskDemoApp.swift */; };
-		A1C9C6B72B4AF6400017E5DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6B62B4AF6400017E5DC /* ContentView.swift */; };
 		A1C9C6B92B4AF6450017E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C9C6B82B4AF6450017E5DC /* Assets.xcassets */; };
 		A1C9C6BC2B4AF6450017E5DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C9C6BB2B4AF6450017E5DC /* Preview Assets.xcassets */; };
 		A1C9C6C82B4AF9300017E5DC /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6C72B4AF9300017E5DC /* PrimaryTextField.swift */; };
@@ -18,7 +17,7 @@
 		A1C9C6E62B4B41FA0017E5DC /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6E52B4B41FA0017E5DC /* Strings+Generated.swift */; };
 		A1C9C6E92B4B42BD0017E5DC /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6E82B4B42BD0017E5DC /* SignupView.swift */; };
 		A1C9C6EE2B4B5CE00017E5DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6ED2B4B5CDF0017E5DC /* LoginView.swift */; };
-		A1C9C6F02B4BE7590017E5DC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6EF2B4BE7590017E5DC /* AuthenticationViewModel.swift */; };
+		A1C9C6F02B4BE7590017E5DC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6EF2B4BE7590017E5DC /* LoginViewModel.swift */; };
 		A1C9C6F52B4C2C030017E5DC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6F42B4C2C030017E5DC /* TabBarView.swift */; };
 		A1C9C6F72B4C30B30017E5DC /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6F62B4C30B30017E5DC /* HorizontalCell.swift */; };
 		A1C9C6F92B4C3BE00017E5DC /* VerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6F82B4C3BE00017E5DC /* VerticalCell.swift */; };
@@ -42,12 +41,12 @@
 		A1CB8C602B4F2BA000316DD4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C5F2B4F2BA000316DD4 /* UserDefaultManager.swift */; };
 		A1CB8C622B4F2C7100316DD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C612B4F2C7100316DD4 /* User.swift */; };
 		A1CB8C642B4F2D2800316DD4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C632B4F2D2800316DD4 /* AppRouter.swift */; };
+		A1CB8C662B4F4AAF00316DD4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C652B4F4AAF00316DD4 /* SignupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1C9C6B12B4AF6400017E5DC /* TaskDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C9C6B42B4AF6400017E5DC /* TaskDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDemoApp.swift; sourceTree = "<group>"; };
-		A1C9C6B62B4AF6400017E5DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1C9C6B82B4AF6450017E5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C9C6BB2B4AF6450017E5DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1C9C6C72B4AF9300017E5DC /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -58,7 +57,7 @@
 		A1C9C6E52B4B41FA0017E5DC /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		A1C9C6E82B4B42BD0017E5DC /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A1C9C6ED2B4B5CDF0017E5DC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A1C9C6EF2B4BE7590017E5DC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		A1C9C6EF2B4BE7590017E5DC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A1C9C6F42B4C2C030017E5DC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A1C9C6F62B4C30B30017E5DC /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
 		A1C9C6F82B4C3BE00017E5DC /* VerticalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCell.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		A1CB8C5F2B4F2BA000316DD4 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		A1CB8C612B4F2C7100316DD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A1CB8C632B4F2D2800316DD4 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A1CB8C652B4F4AAF00316DD4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,6 @@
 				A1C9C6C32B4AF68F0017E5DC /* Model */,
 				A1C9C6C22B4AF67F0017E5DC /* Scences */,
 				A1C9C6B42B4AF6400017E5DC /* TaskDemoApp.swift */,
-				A1C9C6B62B4AF6400017E5DC /* ContentView.swift */,
 				A1C9C6B82B4AF6450017E5DC /* Assets.xcassets */,
 				A1C9C6BA2B4AF6450017E5DC /* Preview Content */,
 			);
@@ -239,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C9C6E82B4B42BD0017E5DC /* SignupView.swift */,
+				A1CB8C652B4F4AAF00316DD4 /* SignupViewModel.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -247,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C9C6ED2B4B5CDF0017E5DC /* LoginView.swift */,
+				A1C9C6EF2B4BE7590017E5DC /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -304,7 +305,6 @@
 		A1CB8C502B4EE1F400316DD4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A1C9C6EF2B4BE7590017E5DC /* AuthenticationViewModel.swift */,
 				A1C9C6EC2B4B5CC30017E5DC /* Login */,
 				A1C9C6E72B4B42450017E5DC /* Signup */,
 			);
@@ -413,7 +413,6 @@
 				A1C9C6E62B4B41FA0017E5DC /* Strings+Generated.swift in Sources */,
 				A1C9C7092B4C64280017E5DC /* HomeViewModel.swift in Sources */,
 				A1C9C6C82B4AF9300017E5DC /* PrimaryTextField.swift in Sources */,
-				A1C9C6B72B4AF6400017E5DC /* ContentView.swift in Sources */,
 				A1C9C7112B4D383A0017E5DC /* TabBarItem.swift in Sources */,
 				A1C9C6F92B4C3BE00017E5DC /* VerticalCell.swift in Sources */,
 				A1C9C6F72B4C30B30017E5DC /* HorizontalCell.swift in Sources */,
@@ -423,6 +422,7 @@
 				A1CB8C4D2B4ED5E700316DD4 /* Constants.swift in Sources */,
 				A1C9C6FC2B4C3E960017E5DC /* DetailsView.swift in Sources */,
 				A1CB8C4A2B4E79C300316DD4 /* AuthenticationManager.swift in Sources */,
+				A1CB8C662B4F4AAF00316DD4 /* SignupViewModel.swift in Sources */,
 				A1C9C7162B4D45460017E5DC /* CardCell.swift in Sources */,
 				A1C9C6E92B4B42BD0017E5DC /* SignupView.swift in Sources */,
 				A1C9C70D2B4C96570017E5DC /* Category.swift in Sources */,
@@ -430,7 +430,7 @@
 				A1CB8C602B4F2BA000316DD4 /* UserDefaultManager.swift in Sources */,
 				A1C9C6EE2B4B5CE00017E5DC /* LoginView.swift in Sources */,
 				A1C9C71A2B4DD0E30017E5DC /* ProductsViewModel.swift in Sources */,
-				A1C9C6F02B4BE7590017E5DC /* AuthenticationViewModel.swift in Sources */,
+				A1C9C6F02B4BE7590017E5DC /* LoginViewModel.swift in Sources */,
 				A1C9C6FF2B4C46EB0017E5DC /* View+Extension.swift in Sources */,
 				A1CB8C622B4F2C7100316DD4 /* User.swift in Sources */,
 				A1C9C70B2B4C93C70017E5DC /* ApiManager.swift in Sources */,

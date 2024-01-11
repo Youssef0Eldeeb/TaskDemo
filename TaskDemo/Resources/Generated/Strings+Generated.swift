@@ -67,6 +67,8 @@ internal enum AppStrings {
       internal static let name = AppStrings.tr("Localizable", "Signup.textfield.name", fallback: "Name")
       /// Password
       internal static let password = AppStrings.tr("Localizable", "Signup.textfield.password", fallback: "Password")
+      /// Phone
+      internal static let phone = AppStrings.tr("Localizable", "Signup.textfield.phone", fallback: "Phone")
     }
   }
 }

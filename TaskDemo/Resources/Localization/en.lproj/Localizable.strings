@@ -8,6 +8,7 @@
 
 "Signup.title" = "Sign Up";
 "Signup.textfield.name" = "Name";
+"Signup.textfield.phone" = "Phone";
 "Signup.textfield.email" = "Email";
 "Signup.textfield.password" = "Password";
 "Signup.button.signup" = "Create account";

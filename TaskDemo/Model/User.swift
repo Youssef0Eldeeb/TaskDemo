@@ -7,6 +7,19 @@
 
 import Foundation
 
-struct User: Codable{
-    var name, phone, email, password: String?
+struct AuthResponse: Codable {
+    var status: Bool?
+    var message: String?
+    var data: User?
 }
+
+struct User: Codable {
+    var name: String?
+    var phone: String?
+    var email: String?
+    var id: Int?
+    var image: String?
+    var token: String?
+}
+
+

@@ -9,23 +9,32 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel = AuthenticationViewModel(authMethed: .login)
+    @StateObject private var navigation = NavigationManager()
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
-        NavigationView{
-            VStack(spacing: 50) {
+        ZStack{
+            VStack(spacing: 20) {
+                loginTitle
+                Spacer()
                 socialMediaButtons
+                Spacer()
                 textfields
                 signinView
-                
+                Spacer()
             }
-            .navigationTitle(AppStrings.Login.title)
+            .padding()
+            if viewModel.isLoading{
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .padding()
+                    .scaleEffect(2)
+            }
         }
-        .padding()
-        .onAppear{
-            viewModel.reset()
-        }
-        
+    }
+    private var loginTitle: some View{
+        Text(AppStrings.Login.title)
+            .font(.system(size: 32, weight: .semibold, design: .default))
     }
     
     private var socialMediaButtons: some View {
@@ -36,7 +45,6 @@ struct LoginView: View {
             Button(AppStrings.Signup.Button.google){
                 //
             }.buttonStyle(.customButtonStyle())
-            
         }
     }
     
@@ -48,11 +56,8 @@ struct LoginView: View {
             PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
             
             Button(AppStrings.Login.Button.login){
-                viewModel.Authenticate()
+                viewModel.login()
             }.buttonStyle(.customButtonStyle())
-                .fullScreenCover(isPresented: $viewModel.isAuthenticatedValid, content: {
-                    TabBarView(selectedIndex: 0)
-                })
             
         }
         .autocorrectionDisabled(true)
@@ -60,12 +65,15 @@ struct LoginView: View {
     }
     
     private var signinView: some View {
-        HStack {
-            Text(AppStrings.Signup.Text.signin)
-            Button(AppStrings.Signup.Button.signin) {
-                //
+        VStack{
+            HStack {
+                Text(AppStrings.Signup.Text.notmember)
+                Button(AppStrings.Signup.Button.signup) {
+                    //                navigation.pop(to: .signup)
+                    @Environment(\.dismiss) var dismiss
+                }
+                .foregroundColor(.primaryButton)
             }
-            .foregroundColor(.primaryButton)
         }
     }
     
@@ -73,5 +81,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environmentObject(AuthenticationViewModel(authMethed: .login))
+        .environmentObject(LoginViewModel())
 }

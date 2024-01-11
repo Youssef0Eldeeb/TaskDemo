@@ -7,26 +7,36 @@
 
 import SwiftUI
 
-
-
-
 struct SignupView: View {
     
-    @StateObject var viewModel = AuthenticationViewModel(authMethed: .signup)
-    
-//    @Published var pageArray = [LoginView()]
+    @StateObject var viewModel = SignupViewModel()
+    @StateObject private var navigation = NavigationManager()
     
     var body: some View {
-        NavigationView{
-            VStack(spacing: 50) {
-                socialMediaButtons
-                textfields
-                signinView
+        NavigationStack(path: $navigation.routes) {
+            ZStack{
+                VStack(spacing: 50) {
+                    socialMediaButtons
+                    textfields
+                    signinView
+                    
+                }
+                if viewModel.isLoading{
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .padding()
+                        .scaleEffect(2)
+                }
                 
             }
+            .padding()
             .navigationTitle(AppStrings.Signup.title)
+            .navigationDestination(for: NavigationEnum.self) { route in
+                route.view
+            }
+            
         }
-        .padding()
+        
         .onAppear{
             viewModel.reset()
         }
@@ -47,18 +57,16 @@ struct SignupView: View {
     
     private var textfields: some View {
         VStack(spacing: 16){
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.name , text: $viewModel.name)
+            PrimaryTextField(placeholder: AppStrings.Signup.Textfield.phone, text: $viewModel.phone)
             PrimaryTextField(placeholder: AppStrings.Signup.Textfield.email, text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .textContentType(.emailAddress)
             PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
             
             Button(AppStrings.Signup.Button.signup){
-                viewModel.Authenticate()
+                viewModel.signup()
             }.buttonStyle(.customButtonStyle())
-                .fullScreenCover(isPresented: $viewModel.isAuthenticatedValid, content: {
-                    TabBarView(selectedIndex: 0)
-                })
-            
         }
         .autocorrectionDisabled(true)
         .textInputAutocapitalization(.never)
@@ -67,15 +75,10 @@ struct SignupView: View {
     private var signinView: some View {
         HStack {
             Text(AppStrings.Signup.Text.signin)
-            NavigationLink(destination: LoginView(), label: {
-                Text(AppStrings.Signup.Button.signin)
-                    .foregroundStyle(Color.primaryButton)
-//                Button(AppStrings.Signup.Button.signin) {
-//                    
-//                }
-//                .foregroundColor(.primaryButton)
-            })
-            
+            Button(AppStrings.Login.Button.login) {
+                navigation.navigate(to: .login)
+            }
+            .foregroundColor(.primaryButton)
         }
     }
     
@@ -83,5 +86,5 @@ struct SignupView: View {
 
 #Preview {
     SignupView()
-        .environmentObject(AuthenticationViewModel(authMethed: .signup))
+        .environmentObject(SignupViewModel())
 }

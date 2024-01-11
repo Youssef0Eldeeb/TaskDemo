@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailsView: View {
     @Environment(\.dismiss) var dismiss
+//    @StateObject private var navigation = NavigationManager()
 
     var body: some View {
         ZStack {
@@ -89,6 +90,7 @@ struct DetailsView: View {
     private var backButoonView: some View {
         HStack{
             BackButton(action: {
+//                navigation.pop(to: .home)
                 dismiss()
             }, label: {})
             Spacer()

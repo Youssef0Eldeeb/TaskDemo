@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @Namespace private var menuItemTransition
+    @StateObject private var navigation = NavigationManager()
     
     let gridColumns = [
         GridItem(.adaptive(minimum: 120)),
@@ -18,20 +19,29 @@ struct HomeView: View {
 //    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        NavigationView{
+        NavigationStack(path: $navigation.routes) {
             VStack(alignment: .leading, spacing: 10){
                 headlineText(text: "Category")
                 horizontalCollectionView
                 headlineText(text: "Products")
                 cardCollection
             }
+            .navigationDestination(for: NavigationEnum.self) { route in
+                route.view
+            }
             .navigationTitle("Home")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        AppRouter.shared.logout()
+                    } label: {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                            .fontWeight(.bold)
+                    }
+
+                }
+            }
         }
-        
-        .onAppear{
-            //            viewModel.fetchCategory()
-        }
-        
     }
     
     func headlineText(text: String) -> some View{
@@ -44,10 +54,8 @@ struct HomeView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20){
                 ForEach([1,2,3,4], id: \.self) { index in
-                    NavigationLink {
-                        DetailsView()
-                    } label: {
-                        HorizontalCell(title: "hello", description: "description", imageUrl: "https://student.valuxapps.com/storage/uploads/categories/16445270619najK.6242655.jpg")
+                    HorizontalCell(title: "hello", description: "description", imageUrl: "https://student.valuxapps.com/storage/uploads/categories/16445270619najK.6242655.jpg").onTapGesture {
+                        navigation.navigate(to: .details)
                     }
                 }
             }
@@ -61,6 +69,9 @@ struct HomeView: View {
             LazyVGrid(columns: gridColumns, content: {
                 ForEach([1,2,3,4,5,4,4,4].indices, id: \.self){index in
                     CardCell()
+                        .onTapGesture {
+                            navigation.navigate(to: .details)
+                        }
                 }
             })
         }
