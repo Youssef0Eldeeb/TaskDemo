@@ -19,17 +19,18 @@ class ProductsViewModel: ObservableObject{
     
     
     func fetchCategories () async throws -> [Category]? {
-        let categoryResponse =  try await apiManager.fetchData(url: "https://student.valuxapps.com/api/categories", responseClass: CategoryResponse.self)
+        let categoryResponse =  try await apiManager.fetchData(url: url_Category, responseClass: CategoryResponse.self)
+        do{
+            try await self.fetchProducts(categoryId: "\(categoryResponse.data.data?[0].id ?? 0)")
+        }catch{
+            print(error.localizedDescription)
+        }
+        
         return categoryResponse.data.data
     }
     
-    
     func fetchProducts(categoryId: String)async throws{
-        
-        let productData = try await apiManager.fetchData(url: "https://student.valuxapps.com/api/categories/\(categoryId)", responseClass: ProductResponse.self)
-        
+        let productData = try await apiManager.fetchData(url: "\(url_ProductbyCategory+categoryId)", responseClass: ProductResponse.self)
         self.productsArray = productData.data.data ?? []
-        
     }
-    
 }

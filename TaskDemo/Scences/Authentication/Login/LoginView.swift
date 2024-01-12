@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject private var navigation = NavigationManager()
     @StateObject var viewModel = LoginViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack{
@@ -69,8 +69,7 @@ struct LoginView: View {
             HStack {
                 Text(AppStrings.Signup.Text.notmember)
                 Button(AppStrings.Signup.Button.signup) {
-                    //                navigation.pop(to: .signup)
-                    @Environment(\.dismiss) var dismiss
+                    dismiss()
                 }
                 .foregroundColor(.primaryButton)
             }

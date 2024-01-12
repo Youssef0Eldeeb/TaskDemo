@@ -10,10 +10,9 @@ import SwiftUI
 struct SignupView: View {
     
     @StateObject var viewModel = SignupViewModel()
-    @StateObject private var navigation = NavigationManager()
     
     var body: some View {
-        NavigationStack(path: $navigation.routes) {
+        NavigationStack{
             ZStack{
                 VStack(spacing: 50) {
                     socialMediaButtons
@@ -31,10 +30,6 @@ struct SignupView: View {
             }
             .padding()
             .navigationTitle(AppStrings.Signup.title)
-            .navigationDestination(for: NavigationEnum.self) { route in
-                route.view
-            }
-            
         }
         
         .onAppear{
@@ -75,10 +70,12 @@ struct SignupView: View {
     private var signinView: some View {
         HStack {
             Text(AppStrings.Signup.Text.signin)
-            Button(AppStrings.Login.Button.login) {
-                navigation.navigate(to: .login)
+            NavigationLink {
+                LoginView()
+            } label: {
+                Text(AppStrings.Login.Button.login)
+                    .foregroundColor(.primaryButton)
             }
-            .foregroundColor(.primaryButton)
         }
     }
     

@@ -9,26 +9,21 @@ import SwiftUI
 
 struct DetailsView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var productsViewModel: ProductsViewModel
 
+    let product: Product
+    
     var body: some View {
-        
-        if let product = productsViewModel.selectedProduct {
+        ZStack {
+            VStack(spacing: -35){
+                upperView(with: product)
+                buttomView(product: product)
+            }//: VStack
+            .ignoresSafeArea( edges: .top)
+            .padding(.horizontal, -1)
             
-            ZStack {
-                VStack(spacing: -35){
-                    upperView(with: product)
-                    buttomView(product: product)
-                }//: VStack
-                .ignoresSafeArea( edges: .top)
-                .padding(.horizontal, -1)
-                
-                dataCenterView(product: product)
-            }//: ZStack
-            .navigationBarBackButtonHidden(true)
-        } else {
-            Text("some thing is error")
-        }
+            dataCenterView(product: product)
+        }//: ZStack
+        .navigationBarBackButtonHidden(true)
     }
     
     
@@ -97,7 +92,6 @@ struct DetailsView: View {
     private var backButoonView: some View {
         HStack{
             BackButton(action: {
-//                navigation.pop(to: .home)
                 dismiss()
             }, label: {})
             Spacer()
@@ -118,5 +112,5 @@ struct DetailsView: View {
 }
 
 #Preview {
-    DetailsView()
+    DetailsView(product: .init(id: nil, price: 0.0, oldPrice: nil, discount: nil, image: "", name: "", description: "", images: nil, inFavorites: nil, inCart: nil))
 }

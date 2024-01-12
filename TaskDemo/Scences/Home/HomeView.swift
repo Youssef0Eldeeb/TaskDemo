@@ -10,10 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @Namespace private var menuItemTransition
-    @StateObject private var navigation = NavigationManager()
     @StateObject private var viewModel = HomeViewModel()
-    @StateObject private var productViewModel = ProductsViewModel()
-//    @StateObject private var
     
     let gridColumns = [
         GridItem(.adaptive(minimum: 120)),
@@ -21,18 +18,12 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        NavigationStack(path: $navigation.routes) {
+        NavigationStack{
             VStack(alignment: .leading, spacing: 10){
                 
                 horizontalCollectionView
                 headlineText(text: "Popular")
                 cardCollection
-            }
-            .navigationDestination(for: NavigationEnum.self) { route in
-                route.view
-                    .environmentObject(productViewModel)
-                    .environmentObject(navigation)
-                    
             }
             .navigationTitle("Home")
             .toolbar {
@@ -86,10 +77,11 @@ struct HomeView: View {
         ScrollView(.vertical, showsIndicators: false){
             LazyVGrid(columns: gridColumns, content: {
                 ForEach(viewModel.popularProducts, id: \.self){product in
-                    CardCell(product: product)
-                        .onTapGesture {
-                            navigation.navigate(to: .details)
-                        }
+                    NavigationLink {
+                        DetailsView(product: product)
+                    } label: {
+                        CardCell(product: product)
+                    }
                 }
             })
             .padding(10)
