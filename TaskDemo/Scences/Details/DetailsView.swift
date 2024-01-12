@@ -9,11 +9,11 @@ import SwiftUI
 
 struct DetailsView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var productsViewModel: ProductsViewModel
+    @EnvironmentObject var navigation: Navigation<NavigationEnum, Product>
 
     var body: some View {
         
-        if let product = productsViewModel.selectedProduct {
+        if let product = navigation.data {
             
             ZStack {
                 VStack(spacing: -35){

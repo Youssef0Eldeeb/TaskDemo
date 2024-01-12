@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    @StateObject private var navigation = NavigationManager()
+    @StateObject private var navigation = Navigation<NavigationEnum, Product>()
     @StateObject private var viewModel = ProductsViewModel()
     @Namespace private var menuItemTransition
     @State var selectedIndex: Int = 0
@@ -79,12 +79,7 @@ struct ProductsView: View {
                     
                     VerticalCell(product: product)
                         .onTapGesture {
-                            print("\n", product)
-                            viewModel.selectedProduct = product
-                            navigation.navigate(to: .details)
-                        
-//                            data.product = product
-                            
+                            navigation.navigate(to: .details, withData: product)  
                         }
                 }
             }
