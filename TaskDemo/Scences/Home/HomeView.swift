@@ -12,6 +12,8 @@ struct HomeView: View {
     @Namespace private var menuItemTransition
     @StateObject private var navigation = NavigationManager()
     @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var productViewModel = ProductsViewModel()
+//    @StateObject private var
     
     let gridColumns = [
         GridItem(.adaptive(minimum: 120)),
@@ -28,6 +30,9 @@ struct HomeView: View {
             }
             .navigationDestination(for: NavigationEnum.self) { route in
                 route.view
+                    .environmentObject(productViewModel)
+                    .environmentObject(navigation)
+                    
             }
             .navigationTitle("Home")
             .toolbar {
@@ -42,9 +47,13 @@ struct HomeView: View {
                 }
             }
         }
-        .onAppear(perform: {
-            viewModel.fetchHomeResponse()
-        })
+        .task {
+            do{
+                try await viewModel.fetchHomeResponse()
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func headlineText(text: String) -> some View{
@@ -62,13 +71,15 @@ struct HomeView: View {
             }
         }
         .padding(.leading, 15)
-        .frame(height: 250)
+        .frame(height: 260)
     }
     private func HorizontalCell(banner: Banner) -> some View{
         AsyncImage(url: URL(string: banner.image ?? "https://student.valuxapps.com/storage/uploads/banners/1689107104Ezc0d.photo_2023-07-11_23-07-59.png"))
             .frame(width: 300, height: 250)
             .scaledToFit()
             .clipShape(RoundedRectangle(cornerRadius: 12))
+            .shadow(radius: 2)
+            .padding(.vertical)
     }
     
     var cardCollection: some View{
@@ -81,6 +92,7 @@ struct HomeView: View {
                         }
                 }
             })
+            .padding(10)
         }
     }
     

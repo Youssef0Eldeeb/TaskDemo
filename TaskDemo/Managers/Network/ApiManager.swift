@@ -6,76 +6,31 @@
 //
 
 import SwiftUI
-
+enum NetworkError: Error {
+    case wrongUrl, responseFailed, statusError
+}
 @MainActor
 class APIManager: ObservableObject {
     
-    static let shared = APIManager()
     
-    @Published var responseCategoryData: [Category]?
-    @Published var error: Error?
-    
-//    private init() {}
-    
-    func fetchCategories() {
-        Task{
-            guard let url = URL(string: "https://student.valuxapps.com/api/categories") else {return}
-            
-            do{
-                let (data, response) = try await URLSession.shared.data(from: (url))
-                guard let httpRespnse = response as? HTTPURLResponse, httpRespnse.statusCode == 200 else{
-                    return
-                }
-                let result = try JSONDecoder().decode(CategoryResponse.self, from: data)
-                self.responseCategoryData = result.data.data
-                
-            }catch{
-                print(error.localizedDescription)
-            }
+    func fetchData<T: Decodable>(url: String, responseClass: T.Type) async throws -> T {
+        
+        guard let url = URL(string: url) else {
+            throw NetworkError.wrongUrl
         }
+        
+        let (data, response) = try await URLSession.shared.data(from: (url))
+        guard let httpRespnse = response as? HTTPURLResponse else{
+            throw NetworkError.responseFailed
+        }
+        guard httpRespnse.statusCode == 200 else {
+            throw NetworkError.statusError
+        }
+        
+        let result = try JSONDecoder().decode(T.self, from: data)
+        return result
+        
     }
-    func fetchDataByCategory(categoryId: String, completion: @escaping ([Product]?, Error?) -> (Void)){
-        
-        guard let url = URL(string: "https://student.valuxapps.com/api/categories/\(categoryId)") else {return}
-        
-        URLSession.shared.dataTask(with: url){ data, response, error in
-            guard let data = data , error == nil else {
-                completion(nil, error)
-                return
-            }
-            do{
-                let decodedData = try JSONDecoder().decode(ProductResponse.self, from: data)
-                DispatchQueue.main.async{
-                    print(decodedData.data.data?.count)
-                    completion(decodedData.data.data, nil)
-                }
-            }catch{
-                print(error.localizedDescription)
-                completion(nil, error)
-            }
-        }.resume()
-    }
-    
-    func fetchHomeResponse(completion: @escaping (HomeData?, Error?) -> (Void)){
-        guard let url = URL(string: "https://student.valuxapps.com/api/home") else {return}
-        
-        URLSession.shared.dataTask(with: url){ data, response, error in
-            guard let data = data , error == nil else {
-                completion(nil, error)
-                return
-            }
-            do{
-                let decodedData = try JSONDecoder().decode(HomeResponse.self, from: data)
-                DispatchQueue.main.async{
-                    completion(decodedData.data, nil)
-                }
-            }catch{
-                print(error.localizedDescription)
-                completion(nil, error)
-            }
-        }.resume()
-    }
-        
     
 }
 

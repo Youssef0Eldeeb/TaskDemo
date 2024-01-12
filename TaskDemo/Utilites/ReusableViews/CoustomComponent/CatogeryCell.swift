@@ -13,27 +13,25 @@ struct CatogeryCell: View{
     var nameSpace: Namespace.ID
     
     var body: some View{
-        if isActive{
-            Text(name)
-                .font(.caption.bold())
-                .padding(.horizontal, 8)
-                .padding(10)
-                .foregroundColor(.white)
-                .background(Rectangle().foregroundColor(.accentColor.opacity(0.8)).cornerRadius(16))
-                .matchedGeometryEffect(id: "highlightmenuite", in: nameSpace)
-        }else{
-            Text(name)
-                .font(.caption.bold())
-                .padding(.horizontal, 8)
-                .padding(10)
-                .foregroundColor(.black)
-                .background(
+        Text(name)
+            .font(.caption.bold())
+            .padding(.horizontal, 8)
+            .padding(10)
+            .foregroundColor(isActive ? .white : .black)
+            .background{
+                if !isActive {
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(lineWidth: 1)
                         .fill(Color.gray.opacity(0.4))
-                )
-        }
+//                        .matchedGeometryEffect(id: "highlightmenuite", in: nameSpace)
+                }else{
+                    RoundedRectangle(cornerRadius: 16)
+                        .foregroundColor(.accentColor.opacity(0.8))
+                        .matchedGeometryEffect(id: "highlightmenuite", in: nameSpace)
+                }
+            }
     }
+    
 }
 
 

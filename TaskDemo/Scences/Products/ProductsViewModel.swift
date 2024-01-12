@@ -12,34 +12,24 @@ import Combine
 @MainActor 
 class ProductsViewModel: ObservableObject{
     @Published var productsArray: [Product] = []
-    var categories: [Category] = []
     @ObservedObject var apiManager = APIManager()
+    @Published var selectedProduct: Product? = nil
     
     private var subscriptions: Set<AnyCancellable> = []
     
-    init(){
-        apiManager.fetchCategories()
+    
+    func fetchCategories () async throws -> [Category]? {
+        let categoryResponse =  try await apiManager.fetchData(url: "https://student.valuxapps.com/api/categories", responseClass: CategoryResponse.self)
+        return categoryResponse.data.data
     }
     
-    func fetchCategory () {
-        apiManager.$responseCategoryData.sink { categoryArray in
-            self.categories = categoryArray ?? []
-            self.fetchProducts(categoryId: "\(self.categories[0].id)")
-        }.store(in: &subscriptions)
-    }
     
-    func fetchProducts(categoryId: String){
-        apiManager.fetchDataByCategory(categoryId: categoryId) { [weak self] responseProducts, error in
-            if let error = error{
-                print(error.localizedDescription)
-            }else if let response = responseProducts{
-                DispatchQueue.main.async{
-                    print(response)
-                    self?.productsArray = response
-                }
-            }
-            
-        }
+    func fetchProducts(categoryId: String)async throws{
+        
+        let productData = try await apiManager.fetchData(url: "https://student.valuxapps.com/api/categories/\(categoryId)", responseClass: ProductResponse.self)
+        
+        self.productsArray = productData.data.data ?? []
+        
     }
     
 }

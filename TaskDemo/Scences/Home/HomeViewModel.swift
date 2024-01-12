@@ -15,15 +15,14 @@ class HomeViewModel: ObservableObject{
     @Published var banners: [Banner] = []
     @Published var popularProducts: [Product] = []
      
-    func fetchHomeResponse (){
-        apiManager.fetchHomeResponse { homeData, error in
-            guard let homeData = homeData, error == nil else{
-                print(error!.localizedDescription)
-                return
-            }
-            self.banners = homeData.banners
-            self.popularProducts = homeData.products
-        }
+    func fetchHomeResponse ()async throws{
+        
+        
+        let homeData = try await apiManager.fetchData(url: "", responseClass: HomeResponse.self)
+        
+        self.banners = homeData.data.banners
+        self.popularProducts = homeData.data.products
+        
     }
     
     

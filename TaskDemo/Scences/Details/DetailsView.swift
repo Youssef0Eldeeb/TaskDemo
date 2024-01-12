@@ -9,26 +9,35 @@ import SwiftUI
 
 struct DetailsView: View {
     @Environment(\.dismiss) var dismiss
-//    @StateObject private var navigation = NavigationManager()
+    @EnvironmentObject var productsViewModel: ProductsViewModel
 
     var body: some View {
-        ZStack {
-            VStack(spacing: -35){
-                upperView
-                buttomView
-            }//: VStack
-            .ignoresSafeArea( edges: .top)
-            .padding(.horizontal, -1)
+        
+        if let product = productsViewModel.selectedProduct {
             
-            dataCenterView
-        }//: ZStack
-        .navigationBarBackButtonHidden(true)
+            ZStack {
+                VStack(spacing: -35){
+                    upperView(with: product)
+                    buttomView(product: product)
+                }//: VStack
+                .ignoresSafeArea( edges: .top)
+                .padding(.horizontal, -1)
+                
+                dataCenterView(product: product)
+            }//: ZStack
+            .navigationBarBackButtonHidden(true)
+        } else {
+            Text("some thing is error")
+        }
     }
     
     
-    private var upperView: some View{
+    private func upperView(with product: Product) -> some View{
         ZStack {
-            AsyncImage(url: URL(string: ""))
+            AsyncImage(url: URL(string: product.image ?? ""), content: { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fit)
+            }, placeholder: {})
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
                 .scaledToFill()
             VStack{
@@ -39,9 +48,9 @@ struct DetailsView: View {
             .padding(.top, 30)
         }
     }
-    private var buttomView: some View{
+    private func buttomView(product: Product) -> some View{
         ZStack {
-            descriptionView
+            descriptionView(product: product)
             
             VStack{
                 Spacer()
@@ -55,9 +64,9 @@ struct DetailsView: View {
         }//: ZStack
     }
     
-    private var descriptionView: some View{
+    private func descriptionView(product: Product) -> some View{
         ScrollView{
-            Text("news.description")
+            Text(product.description ?? "")
                 .padding(.top)
         }
         .frame(width: UIScreen.main.bounds.width - 30, height: UIScreen.main.bounds.height / 3 + 20)
@@ -68,15 +77,13 @@ struct DetailsView: View {
         .roundedCorner(30, corners: [.topLeft, .topRight])
     }
     
-    private var dataCenterView: some View{
+    private func dataCenterView(product: Product) -> some View{
         VStack(alignment: .leading, spacing: 10){
-            Text("news.publishedAt")
-                .font(.footnote)
-            Text("news.title")
+            Text(product.name ?? "Product Name")
                 .fontDesign(.serif)
                 .font(.headline)
                 .lineLimit(3)
-            Text("Published by " + ("news.author"))
+            Text("Price: \(String(format: "%.2f", arguments: [product.price ?? 0.0]))")
                 .font(.footnote.bold())
         }
         .frame(width: 280, height: 130)

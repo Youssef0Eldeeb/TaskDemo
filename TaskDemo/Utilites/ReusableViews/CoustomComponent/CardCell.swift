@@ -17,12 +17,11 @@ struct CardCell: View {
             }, placeholder: {})
             .frame(width: 160, height: 120)
             .cornerRadius(12)
-            
                 
-            VStack(alignment: .leading){
+            VStack(alignment: .center){
                 Text(product.name ?? "")
                     .font(.system(size: 18, weight: .bold, design: .default))
-                Text("Price: \(product.price ?? 0.0)")
+                Text("Price: \(String(format: "%.2f", arguments: [product.price ?? 0.0]))")
                     .font(.system(size: 14, weight: .regular, design: .default))
             }
             .padding(.leading, 5)
@@ -31,6 +30,10 @@ struct CardCell: View {
                 
         }
         .frame(width: 160, height: 170)
+        .background()
+        .cornerRadius(12)
+        .shadow(radius: 2)
+        
         
     }
 }

@@ -42,6 +42,7 @@
 		A1CB8C642B4F2D2800316DD4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C632B4F2D2800316DD4 /* AppRouter.swift */; };
 		A1CB8C662B4F4AAF00316DD4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C652B4F4AAF00316DD4 /* SignupViewModel.swift */; };
 		A1CB8C682B4FD31900316DD4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C672B4FD31900316DD4 /* Banner.swift */; };
+		A1CB8C6A2B506DFB00316DD4 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8C692B506DFA00316DD4 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		A1CB8C632B4F2D2800316DD4 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		A1CB8C652B4F4AAF00316DD4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A1CB8C672B4FD31900316DD4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		A1CB8C692B506DFA00316DD4 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C9C6FB2B4C3E960017E5DC /* DetailsView.swift */,
+				A1CB8C692B506DFA00316DD4 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				A1C9C6E62B4B41FA0017E5DC /* Strings+Generated.swift in Sources */,
 				A1C9C7092B4C64280017E5DC /* HomeViewModel.swift in Sources */,
 				A1C9C6C82B4AF9300017E5DC /* PrimaryTextField.swift in Sources */,
+				A1CB8C6A2B506DFB00316DD4 /* DetailsViewModel.swift in Sources */,
 				A1C9C7112B4D383A0017E5DC /* TabBarItem.swift in Sources */,
 				A1C9C6F92B4C3BE00017E5DC /* VerticalCell.swift in Sources */,
 				A1C9C7182B4DCC560017E5DC /* Product.swift in Sources */,
