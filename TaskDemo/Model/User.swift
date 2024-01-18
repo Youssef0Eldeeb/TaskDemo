@@ -8,8 +8,8 @@
 import Foundation
 
 struct AuthResponse: Codable {
-    var status: Bool?
-    var message: String?
+    var status: Bool
+    var message: String
     var data: User?
 }
 

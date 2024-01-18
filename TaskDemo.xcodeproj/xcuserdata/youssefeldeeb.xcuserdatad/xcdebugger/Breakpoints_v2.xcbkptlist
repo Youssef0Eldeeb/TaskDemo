@@ -749,5 +749,115 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E9F1A27-FE71-4FE2-82D9-2A253F3FFDDD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "signup(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E9F1A27-FE71-4FE2-82D9-2A253F3FFDDD - 96d1da1d5bacb038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TaskDemo.AuthResponse, TaskDemo.AuthenticationError&gt;) -&gt; () in TaskDemo.SignupViewModel.signup() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Documents/Material/The%20Apps/My%20Apps/TaskDemo/TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "2E9F1A27-FE71-4FE2-82D9-2A253F3FFDDD - 96d1da1d5bacb038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TaskDemo.AuthResponse, TaskDemo.AuthenticationError&gt;) -&gt; () in TaskDemo.SignupViewModel.signup() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Documents/Material/The%20Apps/My%20Apps/TaskDemo/TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "2E9F1A27-FE71-4FE2-82D9-2A253F3FFDDD - 96d1da1d5bacb038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TaskDemo.AuthResponse, TaskDemo.AuthenticationError&gt;) -&gt; () in TaskDemo.SignupViewModel.signup() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Documents/Material/The%20Apps/My%20Apps/TaskDemo/TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1356">
+               </Location>
+               <Location
+                  uuid = "2E9F1A27-FE71-4FE2-82D9-2A253F3FFDDD - 96d1da1d5bacb038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TaskDemo.AuthResponse, TaskDemo.AuthenticationError&gt;) -&gt; () in TaskDemo.SignupViewModel.signup() -&gt; ()"
+                  moduleName = "TaskDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefeldeeb/Documents/Material/The%20Apps/My%20Apps/TaskDemo/TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C192937F-3E00-4897-AAC8-78F332DEF5D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Authentication/Signup/SignupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "signup(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4640CECB-6D63-4759-AA9A-BA6E860DC1FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskDemo/Scences/Authentication/Signup/SignupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "textfields"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

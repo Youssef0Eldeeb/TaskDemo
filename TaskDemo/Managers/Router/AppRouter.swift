@@ -18,9 +18,12 @@ final class AppRouter: ObservableObject {
         self.updateRootView()
     }
 
-    public func login(_ user: User) {
-        userDefaultManager.saveUser(user)
-        updateRootView()
+    public func login(_ user: User?) {
+        if let user = user {
+            userDefaultManager.saveUser(user)
+            updateRootView()
+        }
+        
     }
    
     public func logout() {

@@ -12,22 +12,27 @@ class LoginViewModel: ObservableObject {
     var password: String = ""
     
     @Published var isLoading: Bool = false
+    @Published var userResponse: AuthResponse = .init(status: true, message: "nil")
     
     func reset() {
         email = ""
         password = ""
     }
     
-    func login() {
-        isLoading = true
+    func login(completion: @escaping()->()) {
+        DispatchQueue.main.async{
+            self.isLoading = true
+        }
         guard isValidEmail(email) && password.count >= 8 else {return}
         AuthenticationManager.shared.login(email: email, password: password) { result in
             DispatchQueue.main.async{
                 self.isLoading = false
             }
             switch result {
-            case .success(let userData):
-                AppRouter.shared.login(userData)
+            case .success(let userResponse):
+                self.userResponse = userResponse
+                completion()
+                AppRouter.shared.login(userResponse.data)
             case .failure(let error):
                 print(error.localizedDescription)
             }

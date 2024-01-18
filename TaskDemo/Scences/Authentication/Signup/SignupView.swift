@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import AlertKit
 
 struct SignupView: View {
     
     @StateObject var viewModel = SignupViewModel()
+    @State private var showAlert = false
     
     var body: some View {
         NavigationStack{
@@ -34,6 +36,7 @@ struct SignupView: View {
         
         .onAppear{
             viewModel.reset()
+            
         }
         
     }
@@ -60,11 +63,19 @@ struct SignupView: View {
             PrimaryTextField(placeholder: AppStrings.Signup.Textfield.password, text: $viewModel.password, secured: true)
             
             Button(AppStrings.Signup.Button.signup){
-                viewModel.signup()
+                viewModel.signup(completion: {
+                    if !self.viewModel.userResponse.status {
+                        self.showAlert = true
+                    }
+                })
             }.buttonStyle(.customButtonStyle())
+                .alert(isPresent: $showAlert, view: alertView(message: viewModel.userResponse.message))
         }
         .autocorrectionDisabled(true)
         .textInputAutocapitalization(.never)
+    }
+    private func alertView(message: String) -> AlertAppleMusic16View{
+        AlertAppleMusic16View(title: "", subtitle: message, icon: .error)
     }
     
     private var signinView: some View {

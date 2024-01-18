@@ -29,7 +29,7 @@ class AuthenticationManager: ObservableObject{
     
 //    private init() {}
     
-    func login(email: String, password: String, completion: @escaping (Result<User, AuthenticationError>) -> (Void)){
+    func login(email: String, password: String, completion: @escaping (Result<AuthResponse, AuthenticationError>) -> (Void)){
         guard let url = URL(string: "https://student.valuxapps.com/api/login") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
@@ -52,16 +52,12 @@ class AuthenticationManager: ObservableObject{
                 completion(.failure(.invalidCredentials))
                 return
             }
-            guard let userData = loginResponse.data else {
-                completion(.failure(.invalidCredentials))
-                return
-            }
-            completion(.success(userData))
+            completion(.success(loginResponse))
         }.resume()
         
     }
     
-    func signup(name: String, phone: String, email: String, password: String, completion: @escaping (Result<User, AuthenticationError>) -> (Void)){
+    func signup(name: String, phone: String, email: String, password: String, completion: @escaping (Result<AuthResponse, AuthenticationError>) -> (Void)){
         guard let url = URL(string: "https://student.valuxapps.com/api/register") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
@@ -80,15 +76,11 @@ class AuthenticationManager: ObservableObject{
                 return
             }
             
-            guard let loginResponse = try? JSONDecoder().decode(AuthResponse.self, from: data) else{
+            guard let signupResponse = try? JSONDecoder().decode(AuthResponse.self, from: data) else{
                 completion(.failure(.invalidCredentials))
                 return
             }
-            guard let userData = loginResponse.data else {
-                completion(.failure(.invalidCredentials))
-                return
-            }
-            completion(.success(userData))
+            completion(.success(signupResponse))
         }.resume()
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A105580A2B593EC80021F784 /* AlertKit in Frameworks */ = {isa = PBXBuildFile; productRef = A10558092B593EC80021F784 /* AlertKit */; };
 		A1C9C6B52B4AF6400017E5DC /* TaskDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C6B42B4AF6400017E5DC /* TaskDemoApp.swift */; };
 		A1C9C6B92B4AF6450017E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C9C6B82B4AF6450017E5DC /* Assets.xcassets */; };
 		A1C9C6BC2B4AF6450017E5DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C9C6BB2B4AF6450017E5DC /* Preview Assets.xcassets */; };
@@ -89,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A105580A2B593EC80021F784 /* AlertKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +355,9 @@
 			dependencies = (
 			);
 			name = TaskDemo;
+			packageProductDependencies = (
+				A10558092B593EC80021F784 /* AlertKit */,
+			);
 			productName = TaskDemo;
 			productReference = A1C9C6B12B4AF6400017E5DC /* TaskDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -382,6 +387,9 @@
 				ar,
 			);
 			mainGroup = A1C9C6A82B4AF6400017E5DC;
+			packageReferences = (
+				A10558082B593EC80021F784 /* XCRemoteSwiftPackageReference "AlertKit" */,
+			);
 			productRefGroup = A1C9C6B22B4AF6400017E5DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -658,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10558082B593EC80021F784 /* XCRemoteSwiftPackageReference "AlertKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/AlertKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10558092B593EC80021F784 /* AlertKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10558082B593EC80021F784 /* XCRemoteSwiftPackageReference "AlertKit" */;
+			productName = AlertKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1C9C6A92B4AF6400017E5DC /* Project object */;
 }

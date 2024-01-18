@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AlertKit
 
 struct LoginView: View {
     
     @StateObject var viewModel = LoginViewModel()
     @Environment(\.dismiss) var dismiss
+    @State private var showAlert = false
     
     var body: some View {
         ZStack{
@@ -56,12 +58,19 @@ struct LoginView: View {
             PrimaryTextField(placeholder: AppStrings.Login.Textfield.password, text: $viewModel.password, secured: true)
             
             Button(AppStrings.Login.Button.login){
-                viewModel.login()
+                viewModel.login(completion: {
+                    if !self.viewModel.userResponse.status {
+                        self.showAlert = true
+                    }
+                })
             }.buttonStyle(.customButtonStyle())
-            
+                .alert(isPresent: $showAlert, view: alertView(message: viewModel.userResponse.message))
         }
         .autocorrectionDisabled(true)
         .textInputAutocapitalization(.never)
+    }
+    private func alertView(message: String) -> AlertAppleMusic16View{
+        AlertAppleMusic16View(title: "", subtitle: message, icon: .error)
     }
     
     private var signinView: some View {
